@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     #3rd 
     'rest_framework',
     'corsheaders',
+    "drf_spectacular",
     #local
     'accounts.apps.AccountsConfig',
     'posts.apps.PostsConfig',
@@ -48,6 +49,13 @@ REST_FRAMEWORK ={
     "DEFAULT_PERMISSION_CLASSES":[
         "rest_framework.permissions.IsAuthenticated",
     ],
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
+SPECTACULAR_SETTINGS = {
+    "TITLE": "Blog API Project",
+    "DESCRIPTION": "A sample blog to learn about DRF",
+    "VERSION": "1.0.0",
+    # OTHER SETTINGS
 }
 
 AUTH_USER_MODEL = "accounts.CustomUser"
