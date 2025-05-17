@@ -45,8 +45,8 @@ INSTALLED_APPS = [
     'posts.apps.PostsConfig',
 ]
 REST_FRAMEWORK ={
-    "DEFAULT_PERMMISSIONS_CLASSES":[
-        "rest_framework.permissions.AllowAny",
+    "DEFAULT_PERMISSION_CLASSES":[
+        "rest_framework.permissions.IsAuthenticated",
     ],
 }
 
